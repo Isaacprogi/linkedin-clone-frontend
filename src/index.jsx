@@ -23,37 +23,6 @@ if (process.env.NODE_ENV === 'production') disableReactDevTools()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Router>
-    <FeedProvider>
-      <NotificationContextProvider>
-        <ThemeContextProvider>
-          <UserContextProvider>
-            <FeedUploadProvider>
-              <MessageContextProvider>
-                <ConnectionContextProvider>
-                  <UsersContextProvider>
-                    <ChatContextProvider>
-                      <LoadingContextProvider>
-                        {/* <React.StrictMode> */}
-                        <App />
-                        {/* </React.StrictMode> */}
-                      </LoadingContextProvider>
-                    </ChatContextProvider>
-                  </UsersContextProvider>
-                </ConnectionContextProvider>
-              </MessageContextProvider>
-            </FeedUploadProvider>
-          </UserContextProvider>
-        </ThemeContextProvider>
-      </NotificationContextProvider>
-=======
-import {NotificationContextProvider} from './context/NotificationContext'
-import ThemeContextProvider from './context/ThemeContext'
-
-import App from './App'
-import './index.css'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <Router>
      <FeedProvider>
       <NotificationContextProvider>
      <ThemeContextProvider>
@@ -76,7 +45,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           </UserContextProvider>
      </ThemeContextProvider>
       </NotificationContextProvider>     
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
     </FeedProvider>
   </Router>
 )
