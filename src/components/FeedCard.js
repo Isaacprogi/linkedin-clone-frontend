@@ -1,11 +1,18 @@
 import React, { useState, useEffect,useMemo } from 'react'
 import { BiWorld } from 'react-icons/bi'
 import { BsThreeDots, BsDot } from 'react-icons/bs'
+<<<<<<< HEAD
 import { AiFillLike,AiFillCaretDown, AiOutlineComment } from 'react-icons/ai'
 import { FaRegCommentDots } from 'react-icons/fa'
 
 import { VscSmiley } from 'react-icons/vsc'
 import { useUserContext } from '../hooks/useUserContext'
+=======
+import { AiFillLike, AiFillHeart,AiFillCaretDown, AiOutlineComment } from 'react-icons/ai'
+import { VscSmiley } from 'react-icons/vsc'
+import { useUserContext } from '../hooks/useUserContext'
+import { useFeedContext } from '../hooks/useFeedContext'
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
 import {axiosFetch} from '../utils/axiosFetch'
 import {CommentCard} from './CommentCard'
 import {SyncLoader} from 'react-spinners'
@@ -17,7 +24,11 @@ import PLACEHOLDERIMAGE from '../images/back.jpeg'
 import { timeFormatting } from '../utils/timeFormatting'
 import { useRef } from 'react'
 import PROFILE from '../images/profile.jpeg'
+<<<<<<< HEAD
 import POSTER from '../images/jy.png'
+=======
+import POSTER from '../images/port1.jpg'
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
 import { useNavigate } from 'react-router-dom'
 
 
@@ -26,6 +37,10 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
   const [commenting, setCommenting] = useState(false)
   const [replyDisplay, setReplyDisplay] = useState(false)
   const [feedTime, setFeedTime] = useState('')
+<<<<<<< HEAD
+=======
+  const {PFI,PFV} = useFeedContext() 
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
   const [likeLoading,setLikeLoading] = useState(true)
   const [commentPostLoading,setCommentPostLoading] = useState(false)
   const [commentDeleteLoading,seCommentDeleteLoading] = useState(false)
@@ -102,6 +117,7 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
     setLikeLoading(true)
      try{
        if(user?.access && feeds && feed){
+<<<<<<< HEAD
          const newFeeds = feeds.map((item)=>{
            if(item?._id === feed?._id){
              return item?.likes.filter(value=>value?._id === user?._id)?.length > 0 ?
@@ -121,6 +137,19 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
           setFeeds(newFeeds)
           const {data} = await axiosFetch.put(`post/like/${feed?._id}`,{userId:user?._id},config)
           setLikeLoading(false)
+=======
+         const {data} = await axiosFetch.put(`post/like/${feed?._id}`,{userId:user?._id},config)
+         const newFeeds = feeds.map((item)=>{
+           if(item?._id === data?._id){
+             return data
+           }
+           else{
+             return item
+           }
+         })
+         setFeeds(newFeeds)
+         setLikeLoading(false)
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
        }      
      }catch(error){
        setLikeLoading(false)
@@ -279,10 +308,17 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
 
 
   return  (
+<<<<<<< HEAD
     <div ref={lastPostRef} className={`w-full  sm:px-3 py-2 ${switchTheme ? "bg-gray-800 border border-gray-700 " : "bg-white border-gray-300 md:border"}   flex flex-col  mb-2 sm:rounded-lg overflow-hidden  `}>
       <div className="w-full flex items-start  md:px-0 justify-between">
 
         <div key={feed?.user?.id} className="flex mb-2 px-2 sm:px-0  ">         
+=======
+    <div ref={lastPostRef} className={`w-full  px-3 py-2 ${switchTheme ? "bg-gray-800 border border-gray-700 " : "bg-white border-gray-300 md:border"}   flex flex-col  mb-2 sm:rounded-lg overflow-hidden  `}>
+      <div className="w-full flex items-start  md:px-0 justify-between">
+
+        <div key={feed?.user?.id} className="flex mb-2  ">         
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
           <div onClick={()=>navigate('/linkedin')} className="img w-[3rem] h-[3rem] rounded-full overflow-hidden mr-2">
           <LazyLoadImage
           width={48}
@@ -292,25 +328,43 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
           />
           </div>
           <div className=' flex flex-col leading-4 justify-start '>
+<<<<<<< HEAD
             <span className={`font-[700] text-[.9rem] ${switchTheme?'text-gray-300':'text-gray-600 '}`}>
+=======
+            <span className={`font-[700] ${switchTheme?'text-gray-300':'text-gray-600 '}`}>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
               {
                 feed?.user?.firstname + ' ' + feed?.user?.lastname
         
               }
               </span>
+<<<<<<< HEAD
             <span className={` text-[.75rem] ${switchTheme?'text-gray-400':'text-gray-500'}  `}>{feed?.user?.title}</span>
+=======
+            <span className={` text-[.67rem] ${switchTheme?'text-gray-400':'text-gray-500'}  `}>{feed?.user?.title}</span>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
             <span className='flex items-center text-[.67rem]  text-gray-500 justify-start'> <span>{feedTime}</span> <BsDot className='mt-1' /> <span><BiWorld className='text-[1rem] text-gray-600' /></span></span>
           </div>
         </div>
 
+<<<<<<< HEAD
        <span className='relative z-[100] pr-2 sm:pr-0'>
+=======
+       <span className='relative z-[100]'>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
          
          <span className={feed?.user?._id === user?._id?'':'hidden'}>
          <BsThreeDots onClick={()=>{
            setFeedOptions(!feedOptions)
+<<<<<<< HEAD
            }} className={`text-[1.5rem] ${switchTheme?"text-gray-300  overflow-hidden hover:bg-gray-600":"text-gray-[500] hover:bg-gray-200"}  rounded-full  p-1 cursor-pointer  `} />
            {
             feedOptions && <div className={`absolute overflow-hidden right-[.8rem] sm:right-[0] shadow-md rounded-md flex flex-col   w-[6rem]  ${switchTheme?'bg-gray-700 text-gray-300':'bg-white  border border-gray-100'}`}>
+=======
+           }} className={`text-[1.5rem] ${switchTheme?"text-gray-300 overflow-hidden hover:bg-gray-600":"text-gray-[500] hover:bg-gray-200"}  rounded-full  p-1 cursor-pointer  `} />
+           {
+            feedOptions && <div className={`absolute overflow-hidden right-[0] shadow-md rounded-md flex flex-col   w-[6rem]  ${switchTheme?'bg-gray-700 text-gray-300':'bg-white  border border-gray-100'}`}>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
           <button onClick={()=>{
               return handlePostEdit(feed?._id)
           } } className={` hidden md:block  ${switchTheme?"hover:bg-gray-600":"hover:bg-gray-200"} cursor-pointer text-sm p-1 flex items-center justify-center w-full`}>Edit</button>
@@ -362,7 +416,11 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
         
       </div>
 
+<<<<<<< HEAD
       <div className={`flex items-center relative mt-2 px-2 sm:px-0 justify-between`}>
+=======
+      <div className={`flex items-center relative mt-2 justify-between`}>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
         <span>
           {
             feed?.likes?.length !== 0 &&
@@ -388,7 +446,11 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
               }
 
             
+<<<<<<< HEAD
         </span>
+=======
+            </span>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
           }
 
           {(feed?.reposts && feed?.reposts?.length !== 0) &&
@@ -406,7 +468,11 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
       <div className={`mt-3 w-full  ${switchTheme?'bg-gray-800':'bg-gray-300'} h-[1px] `}>
         </div>
 
+<<<<<<< HEAD
       <span className={`w-full grid grid-cols-2 ${switchTheme?'text-gray-300':'text-gray-600'} gap-3 px-2 py-2`}>
+=======
+      <span className={`w-full grid grid-cols-2 ${switchTheme?'text-gray-300':'text-gray-600'} gap-3 py-2`}>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
         <button onClick={handleLike} className='rounded-md overflow-hidden'>
           <div className={` ${switchTheme?'hover:bg-gray-700':'hover:bg-gray-100'} duration-200 text-[.8rem] md:text-[.9rem]  cursor-pointer w-full h-full py-2 flex flex-col md:flex-row  items-center justify-center `}>
             <AiFillLike className={`${(feed?.likes?.filter(item=>item?._id === user?._id)?.length) > 0 ? 'text-blue-600 like' : '  like'}`} />
@@ -418,7 +484,11 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
 
         <button className='rounded-md overflow-hidden' onClick={() => setCommenting(!commenting)}>
           <div className={`${switchTheme?'hover:bg-gray-700':'hover:bg-gray-100'}  w-full duration-200 text-[.8rem] md:text-[.9rem] cursor-pointer h-full py-2 flex flex-col md:flex-row items-center justify-center `}>
+<<<<<<< HEAD
             <FaRegCommentDots />
+=======
+            <AiOutlineComment />
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
             <span className='font-[600] '>Comment</span>
           </div>
         </button>

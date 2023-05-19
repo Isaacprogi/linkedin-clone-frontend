@@ -5,7 +5,10 @@ import { useNavigate } from 'react-router-dom'
 import { axiosFetch } from '../utils/axiosFetch'
 import PROFILE from '../images/profile.jpeg'
 import { useThemeContext } from '../hooks/useThemeContext'
+<<<<<<< HEAD
 import { MoonLoader } from 'react-spinners'
+=======
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
 
 import countryList from 'react-select-country-list'
 
@@ -56,8 +59,13 @@ const CompleteProfile = ({error,setError,setInfo}) => {
          return navigate('/login')
        }
       setLoading(false)
+<<<<<<< HEAD
       console.log(error)
       setError(error?.response?.data?.error)
+=======
+      setError(error?.response?.data?.error)
+      console.log(error)
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
     }
   }
 
@@ -66,8 +74,13 @@ const CompleteProfile = ({error,setError,setInfo}) => {
 
 
 
+<<<<<<< HEAD
   return PROFILE && <div className='w-full flex justify-center h-screen overflow-y-auto  '>
     <div className={`  flex flex-col items-center  w-full min-h-[500px] max-w-[25rem] mt-[8rem]   px-3   `}>
+=======
+  return PROFILE && <div className='w-full relative h-screen  '>
+    <div className={`  flex flex-col items-center  w-full max-w-[25rem] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  px-2   `}>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
       <span className="flex w-full flex-col items-center justify-center">
           
         <div className=' flex mb-1 items-center justify-start '>
@@ -120,8 +133,13 @@ const CompleteProfile = ({error,setError,setInfo}) => {
         }}
          >
               {
+<<<<<<< HEAD
                 options?.map((option,index)=>{
                   return <option key={index}>
+=======
+                options?.map(option=>{
+                  return <option>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
                     {option?.label}
                   </option>
                 })
@@ -133,6 +151,7 @@ const CompleteProfile = ({error,setError,setInfo}) => {
 
         
 
+<<<<<<< HEAD
         <button type='submit' disabled={loading} onClick={handleSubmit} className={`rounded-full font-[600] flex items-center justify-center  text-sm  cursor-pointer ${switchTheme ? "hover:bg-gray-500  bg-gray-700" : "hover:bg-blue-500  bg-blue-600"} h-[2.7rem]  p-2 text-white  w-full mb-3`}>
           {
             !loading?'Submit':<MoonLoader color='white' size={20}/>
@@ -140,6 +159,13 @@ const CompleteProfile = ({error,setError,setInfo}) => {
         </button>
         
         <div className={`${switchTheme?"text-red-500 mt-[0.5rem]":"text-red-500"} text-[.8rem] font-[900] h-[3rem] italic w-full items-center justify-start`}>
+=======
+        <button type='submit' disbled={loading}  onClick={handleSubmit} className={`rounded-full font-[600] text-sm  cursor-pointer ${switchTheme?"hover:bg-gray-500  bg-gray-700":"hover:bg-blue-500  bg-blue-600"}  p-2 text-white  w-full mb-3`}>
+          Submit
+        </button>
+        
+        <div className={`${switchTheme?"text-red-500 mt-[0.5rem]":"text-red-500"} h-[3rem] w-full items-center justify-start`}>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
           {
             error && error 
           }

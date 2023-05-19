@@ -10,7 +10,10 @@ import { useThemeContext } from '../hooks/useThemeContext'
 import {v4 as uuid } from 'uuid'
 import 'react-toastify/dist/ReactToastify.css'
 import {ToastContainer, toast} from 'react-toastify'
+<<<<<<< HEAD
 import { MoonLoader } from 'react-spinners'
+=======
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
 
 const Signup = () => {
   const [username, setUsername] = useState('')
@@ -100,8 +103,13 @@ const Signup = () => {
 
 
 
+<<<<<<< HEAD
   return PROFILE && <div className='w-full h-screen flex justify-center overflow-y-auto  '>
     <div className={`  flex flex-col items-center  w-full max-w-[25rem] min-h-[500px]   mt-[4rem]  px-3  `}>
+=======
+  return PROFILE && <div className='w-full relative h-screen  '>
+    <div className={`  flex flex-col items-center  w-full max-w-[25rem] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  px-2   `}>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
       <span className="flex w-full flex-col items-center justify-center">
         <label htmlFor='image-file' >
           <div className={`min-w-[4rem] ${switchTheme?"":"border-blue-400"} border-4 w-[4.5rem] h-[4.5rem] cursor-pointer group  bg-blue-100 rounded-full overflow-hidden`}>
@@ -144,7 +152,11 @@ const Signup = () => {
             setFormActive({ username: false, password: true, confirmPassword: false, email: false })
           }} className={`w-full  cursor-pointer  h-full px-1 outline-none`} value={password} onChange={(e) => setPassword(e.target.value)} type={passwordVisible?.password === false ? "password" : "text"} placeholder='Password' />
           <div className='absolute right-0'>
+<<<<<<< HEAD
             {passwordVisible.password === false ? <AiFillEyeInvisible onClick={() => setPasswordVisible({ ...passwordVisible,password: true })} className='mr-2 cursor-pointer text-lg text-gray-600' /> : <AiFillEye onClick={() => setPasswordVisible({ ...passwordVisible,password: false})} className='mr-2 text-lg cursor-pointer text-gray-600' />
+=======
+            {passwordVisible.password === false ? <AiFillEyeInvisible onClick={() => setPasswordVisible({ password: true, confirmPassword: false })} className='mr-2 cursor-pointer text-lg text-gray-600' /> : <AiFillEye onClick={() => setPasswordVisible({ password: false, confirmPassword: false })} className='mr-2 text-lg cursor-pointer text-gray-600' />
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
             }
           </div>
         </div>
@@ -155,15 +167,24 @@ const Signup = () => {
             setFormActive({ username: false, password: false, confirmPassword: true, email: false })
           }} className={`w-full  cursor-pointer  h-full px-1 outline-none`} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} type={passwordVisible?.confirmPassword === false ? "password" : "text"} placeholder='confirm password' />
           <div className='absolute right-0'>
+<<<<<<< HEAD
             {passwordVisible.confirmPassword === false ? <AiFillEyeInvisible onClick={() => setPasswordVisible({ ...passwordVisible,confirmPassword: true })} className='mr-2 cursor-pointer text-lg text-gray-600' /> : <AiFillEye onClick={() => setPasswordVisible({ ...passwordVisible,confirmPassword: false})} className='mr-2 text-lg cursor-pointer text-gray-600' />
+=======
+            {passwordVisible.confirmPassword === false ? <AiFillEyeInvisible onClick={() => setPasswordVisible({ password: false, confirmPassword: true })} className='mr-2 cursor-pointer text-lg text-gray-600' /> : <AiFillEye onClick={() => setPasswordVisible({ password: false, confirmPassword: false })} className='mr-2 text-lg cursor-pointer text-gray-600' />
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
             }
           </div>
         </div>
 
+<<<<<<< HEAD
         <button type='submit' disabled={loading} onClick={handleSubmit} className={`rounded-full font-[600] flex items-center justify-center  text-sm  cursor-pointer ${switchTheme ? "hover:bg-gray-500  bg-gray-700" : "hover:bg-blue-500  bg-blue-600"} h-[2.7rem]  p-2 text-white  w-full mb-3`}>
           {
             !loading?'Sign up':<MoonLoader color='white' size={20}/>
           }
+=======
+        <button type='submit' disabled={loading} onClick={handleSubmit} className={`rounded-full font-[600] text-sm  cursor-pointer ${switchTheme?"hover:bg-gray-500  bg-gray-700":"hover:bg-blue-500  bg-blue-600"}  p-2 text-white  w-full py-3 mb-3`}>
+          Sign up
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
         </button>
 
         <span className="w-full">
@@ -172,11 +193,19 @@ const Signup = () => {
           </span>
 
           <button disabled={loading} onClick={()=>navigate('/login')} className={`text-blue-500 ml-[1rem] cursor-pointer font-[600]`} >
+<<<<<<< HEAD
             Sign in
           </button>
         </span>
         
         <div className={`${switchTheme?"text-red-500 mt-[0.5rem]":"text-red-500"} text-[.8rem] font-[900] h-[3rem] italic w-full items-center justify-start`}>
+=======
+            Sign In
+          </button>
+        </span>
+        
+        <div className={`${switchTheme?"text-red-500 mt-[0.5rem]":"text-red-500"} h-[3rem] italic w-full items-center justify-start`}>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
           {
             error && error 
           }

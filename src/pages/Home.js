@@ -197,10 +197,14 @@ const Home = ({ feeds, setFeeds }) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0]
       if (file?.size > (10000000)) {
+<<<<<<< HEAD
         toast('Not larger than 10mb',{
           closeOnClick: true,
           autoClose: 1000,
         })
+=======
+        toast('Not larger than 10mb')
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
         e.target.value = ''
         return;
       }
@@ -315,7 +319,11 @@ const Home = ({ feeds, setFeeds }) => {
 
 
   const [pageNumber, setPageNumber] = useState(1)
+<<<<<<< HEAD
   const url = 'https://linkedin-clone-api.onrender.com/api/post'
+=======
+  const url = 'http://localhost:4000/api/post'
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
   const [hasMore, setHasMore] = useState(true)
   const [scrolling, setScrolling] = useState(false)
   const [postFetchLoading, setPostFetchLoading] = useState(false)
@@ -323,7 +331,11 @@ const Home = ({ feeds, setFeeds }) => {
 
   const FEED = useCallback(() => {
     return <Feed postFetchLoading={postFetchLoading} feeds={feeds} hasMore={hasMore} feedInput={feedInput} setFeedToUpdateId={setFeedToUpdateId} setButtonActive={setButtonActive} setComponent={setComponent} setPostEditing={setPostEditing} setPostActive={setPostActive} postActive={postActive} setFeeds={setFeeds} />
+<<<<<<< HEAD
   }, [feeds, postFetchLoading,postActive,setFeeds,hasMore])
+=======
+  }, [feeds, postFetchLoading,postActive,setFeeds])
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
 
 
 
@@ -345,8 +357,13 @@ const Home = ({ feeds, setFeeds }) => {
         if (scrolling) {
           setFeeds(prevFeeds =>
             [...prevFeeds, ...res?.data]
+<<<<<<< HEAD
             )
             setPostFetchLoading(false)
+=======
+          )
+          setPostFetchLoading(false)
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
           
           return setHasMore(res?.data.length > 0)
         }
@@ -354,7 +371,11 @@ const Home = ({ feeds, setFeeds }) => {
         setPostFetchLoading(false)
         setHasMore(res?.data?.length > 0)
         return;
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
       }).catch(e => {
         if (axios.isCancel(e)) return
         setPostFetchLoading(false)
@@ -362,7 +383,10 @@ const Home = ({ feeds, setFeeds }) => {
       })
     }
     return () => cancel()
+<<<<<<< HEAD
     // eslint-disable-next-line
+=======
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
   }, [pageNumber,setFeeds,user?.access])
 
 
@@ -371,6 +395,10 @@ const Home = ({ feeds, setFeeds }) => {
   const scrollToEnd = (e) => {
     setScrolling(true)
     if ((e.target.scrollHeight - e.target.scrollTop) === e.target.clientHeight && hasMore) {
+<<<<<<< HEAD
+=======
+      console.log('what tha fuck bruh')
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
       setPageNumber(pageNumber + 1)
     }
 
@@ -392,7 +420,11 @@ const Home = ({ feeds, setFeeds }) => {
 
   return user?.access && (
     <div onScroll={scrollToEnd} id='scroll-home' className="w-full flex flex-col  overflow-auto h-full">
+<<<<<<< HEAD
       
+=======
+      <ToastContainer />
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
       <NavBar setSearchActiveSmall={setSearchActiveSmall} searchActiveSmall={searchActiveSmall} displayNav={displayNav} />
       <div className={`  w-full flex-auto container mx-auto h-full`}>
 

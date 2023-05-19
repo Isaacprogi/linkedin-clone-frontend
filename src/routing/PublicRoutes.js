@@ -13,7 +13,11 @@ const PublicRoutes = ({auth,authLoading}) => {
    if(authLoading){
       return <div className="w-full h-screen relative">
              <span className="absolute h-[max-content] w-[max-content]  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+<<<<<<< HEAD
              <SyncLoader size={70} color={'gray'}/>
+=======
+             <SyncLoader size={100} color={'gray'}/>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
              </span>
             </div>
    }

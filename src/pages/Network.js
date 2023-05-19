@@ -103,7 +103,11 @@ const Network = ({ setLinkType }) => {
 
             <div className="h-[15rem] flex flex-col w-full">
               <span className={`h-[3rem] ${switchTheme ? "text-gray-400" : ""} flex justify-end px-2 items-center `}>
+<<<<<<< HEAD
                 <span className='mr-[.3rem]'>Ad</span> <BsThreeDots className={`text-4xl ${switchTheme ? "text-gray-300 hover:bg-gray-700" : "hover:bg-gray-200"} cursor-pointer p-2 rounded-full `} />
+=======
+                Ad <BsThreeDots className={`text-4xl ${switchTheme ? "text-gray-300 hover:bg-gray-700" : "hover:bg-gray-200"} cursor-pointer p-2 rounded-full `} />
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
               </span>
               <span className="flex-auto  flex flex-col items-center justify-center">
                 <span className='flex  items-center justify-center'>

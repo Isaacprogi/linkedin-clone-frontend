@@ -297,17 +297,24 @@ const handleLogout = async() => {
       console.log(error)
     }
 }
+<<<<<<< HEAD
 
 const handleSwitch = () => {
     setSwitchTheme(!switchTheme)
     localStorage.setItem('switchTheme', JSON.stringify({ switchTheme: !switchTheme }))
   }
+=======
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
  
 
      
     return profile ? (
         <div className="w-full h-full relative overflow-auto">
+<<<<<<< HEAD
             <button onClick={handleSwitch} className='absolute top-[8.9rem] right-[1rem] outline-none  md:hidden z-[1000] '>
+=======
+            <button onClick={() => setSwitchTheme(!switchTheme)} className='absolute top-[8.9rem] right-[1rem] outline-none  md:hidden z-[1000] '>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
                 {
                   switchTheme ? <BsFillSunFill className={`${searchActiveSmall?"hidden":""} text-[1.5rem] hover:scale-75 duration-300 text-gray-300` }/> : <BsFillMoonFill className={`${searchActiveSmall?"hidden":""}  text-[1.5rem] hover:scale-75 duration-300   text-gray-700`} />
                 }
@@ -326,9 +333,13 @@ const handleSwitch = () => {
                         width={profilePicRef1?.current?.clientWidth}
                         height={profilePicRef1?.current?.clientHeight}
                         src={profile?.photo}
+<<<<<<< HEAD
                         effect='blur'
                         placeholderSrc={PLACEHOLDERIMAGE}/>
                         
+=======
+                        placeholderSrc={PLACEHOLDERIMAGE}/>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
                            }
                             </div>
                         </div>
@@ -701,7 +712,11 @@ const handleSwitch = () => {
             
         </div>
     ):<div className='w-full h-full flex items-center justify-center'>
+<<<<<<< HEAD
         <SyncLoader size={70} color={'gray'}/>
+=======
+        <SyncLoader size={100} color={'gray'}/>
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
     </div>
 }
 

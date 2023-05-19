@@ -21,7 +21,11 @@ export const useMessageQuery = (pageNumber, id, messageDispatch, fetching) => {
         if(user?.access && id && pageNumber > 0 ){
                 axios({
                     method:'GET',
+<<<<<<< HEAD
                     url:`https://linkedin-clone-api.onrender.com/api/message/${id}`,
+=======
+                    url:`http://localhost:4000/api/message/${id}`,
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
                     params: {page:pageNumber, id:id},
                     cancelToken: new axios.CancelToken(c =>cancel = c),
                     headers: {

@@ -107,9 +107,13 @@ const Connections = ({socket}) => {
 
   return (
     <div id='scroll-network' className="w-full h-full relative overflow-auto">
+<<<<<<< HEAD
       <span className='hidden md:block'>
       <NavBar connections={connections} displayNav={displayNav} />
       </span>
+=======
+      <NavBar connections={connections} displayNav={displayNav} />
+>>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
       <div className="container  mt-1 w-full flex-auto container mx-auto h-full">
         <div className={` w-full h-full md:pt-6  md:grid md:grid-cols-medium-connections md:gap-4 `}>
           <div className={`${switchTheme?"bg-gray-800":"sm:border-gray-200 sm:border bg-white "} sm:rounded-lg  h-full `}>
