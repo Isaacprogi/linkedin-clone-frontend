@@ -75,11 +75,7 @@ const InvitationManager = ({ type, linkType, setLinkType }) => {
 
                     <div className={`h-[max-content] py-2 mt-3 sm:rounded-lg overflow-hidden ${switchTheme ? 'bg-gray-800 text-gray-500 ' : 'text-gray-600 bg-white border-gray-300 border'}  flex flex-col  w-full`}>
                         <span className="  flex justify-end  px-2 items-center ">
-<<<<<<< HEAD
                         <span className='mr-[.3rem]'>Ad</span> <BsThreeDots className={`text-4xl ${switchTheme ? "text-gray-300 hover:bg-gray-700" : "hover:bg-gray-200"} cursor-pointer p-2 rounded-full `} />
-=======
-                            Ad <BsThreeDots className='ml-2 hover:bg-gray-200 rounded-full p-2 text-3xl cursor-pointer' />
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
                         </span>
                         <span className='text-center px-3 text-sm text-gray-400'>
                             {user?.firstname}, unlock your potential with linkedn Premium
@@ -98,11 +94,7 @@ const InvitationManager = ({ type, linkType, setLinkType }) => {
                                 <GrKey className='text-[3.5rem] text-blue-200' />
                             </span>
                             <p>See who's viewed your profile in the past 90 days</p>
-<<<<<<< HEAD
                             <span className={`${switchTheme?"hover:bg-gray-700 bg-gray-600":"hover:bg-gray-100 bg-white"} h-[2.3rem] text-blue-700 rounded-full  cursor-pointer overflow-hidden px-4 mt-3  border border-blue-400 flex items-center justify-center`}>
-=======
-                            <span className='h-[2.3rem] text-blue-700 rounded-full hover:bg-gray-100 cursor-pointer overflow-hidden px-4 mt-3 bg-white border border-blue-400 flex items-center justify-center'>
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
                                 Try for free
                             </span>
                         </span>

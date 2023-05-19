@@ -187,7 +187,6 @@ const NavBar = ({ messaging, displayNav, connections, searchActiveSmall, setSear
             {user && !searchActiveSmall && 
             
                  <span onClick={() => navigate(`/linkedin/${user?.username}`)}>
-<<<<<<< HEAD
                     {/* <LazyLoadImage
                   width={profileRef?.current.clientWidth}
                   height={profileRef?.current.clientHeight}
@@ -196,15 +195,6 @@ const NavBar = ({ messaging, displayNav, connections, searchActiveSmall, setSear
                   placeholderSrc={PLACEHOLDERIMAGE}
                 /> */}
                 <img src={user?.photo}  alt="" />
-=======
-                    <LazyLoadImage
-                  width={profileRef?.current.clientWidth}
-                  height={profileRef?.current.clientHeight}
-                  src={user?.photo}
-                  placeholderSrc={PLACEHOLDERIMAGE}
-                />
-                hello
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
                  </span>
             
                 
@@ -228,21 +218,9 @@ const NavBar = ({ messaging, displayNav, connections, searchActiveSmall, setSear
                 {
                   (chats?.length > 0 && chats?.filter(chat => chat?.currentSender === chat?.users?.filter(item => item?._id !== user?._id)[0]?._id)?.length > 0
                   )
-<<<<<<< HEAD
                     ? <div className="absolute top-[1.2rem] left-[.8rem] rounded-full overflow-hidden  h-[.4rem] w-[.5rem] flex items-center justify-center bg-red-500">
                     <span className='w-full h-full relative flex items-center justify-center '>
                       
-=======
-                    ? <div className="absolute top-[.1rem] right-[-.8rem] rounded-full overflow-hidden  h-[1.3rem] w-[1.4rem] flex items-center justify-center bg-red-500">
-                    <span className='w-full h-full relative flex items-center justify-center '>
-                      <span className='text-white text-[.7rem]'>
-                          {
-                            chats?.filter(chat => chat?.currentSender === chat?.users?.filter(item => item?._id !== user?._id)[0]?._id)?.length > 50?
-                            '50+':
-                            chats?.filter(chat => chat?.currentSender === chat?.users?.filter(item => item?._id !== user?._id)[0]?._id)?.length
-                          }
-                      </span>
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
                     </span>
                   </div> : ''
 
@@ -413,7 +391,6 @@ const NavBar = ({ messaging, displayNav, connections, searchActiveSmall, setSear
             {/* Linl to profile */}
             <span onClick={() => handleProfileShow()} className={`relative h-[3.1rem] cursor-pointer   group hover:border-b-[.3rem] border-b-gray-700  flex flex-col items-center justify-center`}>
               <span ref={profilePicRef} className='w-[1.52rem] flex h-[1.52rem]  group-hover:text-gray-700 rounded-full overflow-hidden' >
-<<<<<<< HEAD
                 {
                 //   <LazyLoadImage
                 //   width={profilePicRef?.current.clientWidth}
@@ -423,15 +400,6 @@ const NavBar = ({ messaging, displayNav, connections, searchActiveSmall, setSear
                 // />
                 }
                  <img src={user?.photo}  alt="" />
-=======
-                {<LazyLoadImage
-                  width={profilePicRef?.current.clientWidth}
-                  height={profilePicRef?.current.clientHeight}
-                  src={user?.photo}
-                  placeholderSrc={PLACEHOLDERIMAGE}
-                />
-                }
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
               </span>
               <p className={`${switchTheme ? "text-gray-300" : ""} text-sm flex items-center hidden md:flex`}>Me <AiFillCaretDown /></p>
 

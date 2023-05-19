@@ -12,10 +12,6 @@ import Shipper from '../images/shipper.png'
 
 
 import Turing from '../images/turing.png'
-<<<<<<< HEAD
-=======
-import Brad from '../images/brad.png'
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
 import Amazon from '../images/amazon.png'
 import Google from '../images/google.png'
 import View from '../images/vie.png'
@@ -45,11 +41,7 @@ const Notifications = ({postActiveSmall,setPostActiveSmall}) => {
         </span>
       </div>
 
-<<<<<<< HEAD
       <div className={`  ${switchTheme ? "bg-gray-800 border-gray-800" : "bg-white border border-gray-300 "} md:rounded-lg mb-[3.8rem]  md:mb-2 pb-10    overflow-hidden  lg:row-span-2 grid grid-flow-row auto-rows-[max-content]`}>
-=======
-      <div className={`  ${switchTheme ? "bg-gray-800 border-gray-800" : "bg-white border border-gray-300 "} md:rounded-lg mb-[3.5rem]  md:mb-2 pb-10    overflow-hidden  lg:row-span-2 grid grid-flow-row auto-rows-[max-content]`}>
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
         <div className={`w-full h-[5rem] ${switchTheme ? "hover:bg-gray-700" : "hover:bg-gray-200"}  cursor-pointer flex `}>
           <span className="w-[6rem] flex items-center justify-center  flex-none  h-full">
             <div className="w-[3rem] h-[3rem] overflow-hidden">
@@ -164,11 +156,7 @@ const Notifications = ({postActiveSmall,setPostActiveSmall}) => {
         <div className={`w-full h-[5rem]  ${switchTheme ? "hover:bg-gray-700 " : "hover:bg-gray-200 "} cursor-pointer flex `}>
           <span className="w-[6rem] flex items-center justify-center flex-none  h-full">
             <div className="w-[3rem] h-[3rem] overflow-hidden">
-<<<<<<< HEAD
               <img src={Google} alt="" className="w-full h-full" />
-=======
-              <img src={Brad} alt="" className="w-full h-full" />
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
             </div>
           </span>
           <span className="flex-auto h-full flex items-center justify-start text-gray-600   ">

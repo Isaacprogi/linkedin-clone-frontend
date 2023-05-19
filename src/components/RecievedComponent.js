@@ -11,11 +11,7 @@ function RecievedComponent() {
 
   return (
     <div className={`${switchTheme?"bg-gray-800":""} flex flex-col w-full h-[max-content] `}>
-<<<<<<< HEAD
          <div className={`w-full flex-none border-b  ${switchTheme?" border-gray-700 ":" border-gray-100"}  flex px-3 items-center justify-between sm:justify-start h-[4rem]`}>
-=======
-         <div className={`w-full flex-none ${switchTheme?"border-gray-700":""} border-b border-gray-100 flex px-3 items-center justify-between sm:justify-start h-[4rem]`}>
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
            <span  className={`flex items-center mr-2 
                 rounded-lg border bg-red-700 text-white border-gray-300 hover:border-w-8 overflow-hidden  cursor-pointer justify-start px-3`}>
                  all{`(${pendingConnections?.length})`}

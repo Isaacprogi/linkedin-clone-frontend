@@ -25,14 +25,7 @@ export const MessageDisplayBox = ({ user, photo , fetching, lastListRef}) => {
                     })
                     setLoading(false)
             }
-<<<<<<< HEAD
     }, [data,fetching,lastListRef])
-=======
-    }, [data,fetching])
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
-    
-   
-
 
 
 

@@ -7,11 +7,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useThemeContext } from '../hooks/useThemeContext'
 import { v4 as uuid } from 'uuid'
-<<<<<<< HEAD
 import { MoonLoader } from 'react-spinners'
-=======
-import { PulseLoader } from 'react-spinners'
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
 
 
 
@@ -54,15 +50,9 @@ const Login = ({ error, setError, info, setInfo }) => {
         sessionStorage.setItem('ongoing-registration-user', email)
         return navigate(`/complete-profile/${uuid()}`, { replace: true })
       }
-<<<<<<< HEAD
       setLoading(false)     
       console.log(error)
       setError(error?.response?.data?.error)
-=======
-      setLoading(false)
-      setError(error?.response?.data?.error)
-      console.log(error)
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
     }
 
   }
@@ -77,13 +67,8 @@ const Login = ({ error, setError, info, setInfo }) => {
 
 
 
-<<<<<<< HEAD
   return user ? <div className='w-full h-screen  flex justify-center overflow-y-auto '>
     <div className={`  flex flex-col items-center  min-h-[500px]  mt-[8rem]  w-full max-w-[25rem]   px-3   `}>
-=======
-  return user ? <div className='w-full h-screen'>
-    <div className={`  flex flex-col items-center  w-full max-w-[25rem] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  px-2   `}>
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
       <div className='w-full flex mb-2 items-center justify-center '>
         <span className='text-blue-600 text-2xl'>
           Linkedn
@@ -120,22 +105,14 @@ const Login = ({ error, setError, info, setInfo }) => {
       <div className='w-full w-full max-w-[25rem] flex text-center'>
         <button type='submit' disabled={loading} onClick={handleLogin} className={`rounded-full font-[600] flex items-center justify-center  text-sm  cursor-pointer ${switchTheme ? "hover:bg-gray-500  bg-gray-700" : "hover:bg-blue-500  bg-blue-600"} h-[2.7rem]  p-2 text-white  w-full mb-3`}>
           {
-<<<<<<< HEAD
             !loading?'Login':<MoonLoader color='white' size={20}/>
-=======
-            !loading?'loading':<PulseLoader color='#333' size={20}/>
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
           }
         </button>
       </div>
 
       <span className='w-full mt-4  text-center'>
         <span className='text-gray-500'>
-<<<<<<< HEAD
           New to linkedin?
-=======
-          New to linkedn?
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
         </span>
         <button onClick={() => {
           navigate('/signup')
@@ -146,19 +123,11 @@ const Login = ({ error, setError, info, setInfo }) => {
         </button>
 
         <span className="w-full flex items-center justify-center h-[max-content]">
-<<<<<<< HEAD
         <span onClick={handleGuestAccount} className='text-gray-100 bg-blue-500 px-2 flex items-center justify-center py-2 max-w-[20rem] mt-2 cursor-pointer hover:bg-blue-700 rounded-md'>Get guest Account</span>
       </span>
         </span>
 
       <span className={`${switchTheme?"text-red-500 mt-[0.5rem]":"text-red-500"} text-[.8rem] font-[900] h-[3rem] italic w-full items-center justify-start`}>
-=======
-        <span onClick={handleGuestAccount} className='text-gray-300 bg-blue-500 px-2 flex items-center justify-center py-2 max-w-[20rem] mt-2 cursor-pointer hover:bg-blue-700 rounded-md'>Get guest Account</span>
-      </span>
-        </span>
-
-      <span className='mt-[0.5rem] flex items-center justify-center w-full italic text-red-500 h-[3rem]'>
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
         {error && <p>{error}</p>}
         {info && <p className='text-blue-500'>{info}</p>}
       </span>

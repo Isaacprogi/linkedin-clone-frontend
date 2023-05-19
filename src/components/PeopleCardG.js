@@ -16,26 +16,16 @@ export const PeopleCardG = ({user,PF,setSearchActiveSmall}) => {
             navigate(`/linkedin/${user.username}`)
         }
          }>
-<<<<<<< HEAD
         <div  className="flex-none  mr-2 w-[4rem] h-[4rem] rounded-full flex items-center justify-center overflow-hidden  p-1">
         <div ref={profilePicRef} className='w-full h-full overflow-hidden rounded-full '>
             <LazyLoadImage
-=======
-        <div className="flex-none  mr-2 w-[4rem] h-[4rem] rounded-full overflow-hidden  p-1 items-center justify-center">
-        {
-                    <LazyLoadImage
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
                     width={profilePicRef?.current.clientWidth}
                     height={profilePicRef?.current.clientHeight}
                     effect='blur'
                     src={user?.photo}
                     placeholderSrc={PLACEHOLDERIMAGE}
                   />
-<<<<<<< HEAD
         </div>
-=======
-                   }
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
         </div>
         <div className="flex-auto text-lg  br-red-600">
           <span className={`${switchTheme?"text-gray-300":""} font-[500]`}>{user.firstname + " " + user.lastname}</span>

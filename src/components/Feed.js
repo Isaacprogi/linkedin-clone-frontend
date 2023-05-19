@@ -10,20 +10,8 @@ const Feed = ({ postFetchLoading, feeds, setFeeds, hasMore, postActive, setPostA
 
 
 
-<<<<<<< HEAD
   return <div className='w-full h-full  overflow-hidden'>
     <div className='w-full pb-[3.4rem]'>
-=======
-
-
-
-
-
-
-
-  return <div className='w-full h-full  overflow-hidden'>
-    <div className='w-full pb-[4rem]'>
->>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
       {feeds?.length > 0 && feeds?.map((feed, index) => {
         return <FeedCard setButtonActive={setButtonActive} feedInput={feedInput} setFeedToUpdateId={setFeedToUpdateId} postActive={postActive} setComponent={setComponent} setPostActive={setPostActive} setPostEditing={setPostEditing} setFeeds={setFeeds} feeds={feeds} key={feed?._id} feed={feed} />
       })}
