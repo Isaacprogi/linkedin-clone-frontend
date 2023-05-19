@@ -9,7 +9,6 @@ import { MessageContextProvider } from './context/MessageContext'
 import { LoadingContextProvider } from './context/LoadingContext'
 import ChatContextProvider from './context/ChatContext'
 import ConnectionContextProvider from './context/ConnectionContext'
-<<<<<<< HEAD
 import { NotificationContextProvider } from './context/NotificationContext'
 import ThemeContextProvider from './context/ThemeContext'
 
