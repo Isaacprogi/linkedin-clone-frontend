@@ -397,7 +397,6 @@ const Home = ({ feeds, setFeeds }) => {
     if ((e.target.scrollHeight - e.target.scrollTop) === e.target.clientHeight && hasMore) {
 <<<<<<< HEAD
 =======
-      console.log('what tha fuck bruh')
 >>>>>>> a488ee924db19ec1ef80f721e3bef4dd75604856
       setPageNumber(pageNumber + 1)
     }
