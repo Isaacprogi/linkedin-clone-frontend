@@ -171,7 +171,6 @@ function App() {
 
 
   return (user) && (<div className={` App h-full  relative ${switchTheme ? 'bg-gray-900' : 'bg-gray-100'}  w-full overflow-hidden`}>
-  return (user) && (<div className={` h-full font-sans relative ${switchTheme ? 'bg-gray-900' : 'bg-gray-100'}  w-full overflow-hidden`}>
 
     <SkeletonTheme baseColor='#312121' highlightColor='525252'>
       <Post feeds={feeds} setFeeds={setFeeds} />
