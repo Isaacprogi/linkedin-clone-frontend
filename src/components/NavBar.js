@@ -194,7 +194,7 @@ const NavBar = ({ messaging, displayNav, connections, searchActiveSmall, setSear
                   effect='blur'
                   placeholderSrc={PLACEHOLDERIMAGE}
                 /> */}
-                <img src={user?.photo}  alt="" />
+                <img src={user?.photo} className='w-full h-full'  alt="" />
                  </div>
             
                 

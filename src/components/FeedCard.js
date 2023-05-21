@@ -425,7 +425,7 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
         </div>
       </span>
 
-      <div className={`flex ${!commenting ? 'hidden' : ''}  items-start px-1 justify-between`}>
+      <div className={`flex ${!commenting ? 'hidden' : ''}  items-start px-2 justify-between`}>
         <span ref={feedPostCommentPicRef} className='h-[2.2rem]  min-w-[2.2rem]  w-[2.2rem] rounded-full overflow-hidden mr-1'>
         <LazyLoadImage
         width={35.2}
@@ -443,7 +443,7 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
         </span>
       </div>
 
-      <div className='flex flex-col px-1 w-full h-[max-content]'>
+      <div className='flex flex-col px-3 w-full h-[max-content]'>
         <span className='w-full flex items-center justify-start'>
           <button disabled={commentPostLoading} className={`px-2 ${!replyDisplay ? 'hidden' : ''} mb-1 bg-blue-500 mt-1 rounded-full overfloe-hidden cursor-pointer text-gray-100 `} onClick={handleCommentOnPost}> post</button>
         </span>

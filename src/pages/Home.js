@@ -311,11 +311,17 @@ const Home = ({ feeds, setFeeds }) => {
 
 
 
+ 
+
+
+
+
+
 
 
 
   const [pageNumber, setPageNumber] = useState(1)
-  const url = 'https://linkedin-clone-api.onrender.com/api/post'
+  const url = 'http://localhost:4000/api/post'
   const [hasMore, setHasMore] = useState(true)
   const [scrolling, setScrolling] = useState(false)
   const [postFetchLoading, setPostFetchLoading] = useState(false)
@@ -367,12 +373,39 @@ const Home = ({ feeds, setFeeds }) => {
 
 
 
+//   useEffect(()=>{
+//     var scrollableElement = document.getElementById('scroll-home');
+//     if(scrollableElement){
+//       scrollableElement.addEventListener('wheel', checkScrollDirection);
+//     }
+
+
+// function checkScrollDirection(event) {
+//   if (checkScrollDirectionIsUp(event)) {
+//     console.log('UP');
+//   } else {
+//     console.log('Down');
+//   }
+// }
+
+// function checkScrollDirectionIsUp(event) {
+//   if (event.wheelDelta) {
+//     return event.wheelDelta > 0;
+//   }
+//   return event.deltaY < 0;
+// }
+//   },[])
+
+
+
 
   const scrollToEnd = (e) => {
     setScrolling(true)
     if ((e.target.scrollHeight - e.target.scrollTop) === (e.target.clientHeight) && hasMore) {
       setPageNumber(pageNumber + 1)
     }
+
+    
    
   }
  
@@ -731,9 +764,9 @@ const Home = ({ feeds, setFeeds }) => {
 
       </div>
 
-      {
+      {/* {
         !searchActiveSmall && <FootBar />
-      }
+      } */}
 
 
 
