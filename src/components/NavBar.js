@@ -186,7 +186,7 @@ const NavBar = ({ messaging, displayNav, connections, searchActiveSmall, setSear
           <div  ref={profileRef} className={`profile ${searchActiveSmall ? 'flex border border-gray-300 items-center justify-center' : ''} flex-none w-[2rem] h-[2rem] min-w-[2rem] rounded-full overflow-hidden `}>
             {user && !searchActiveSmall && 
             
-                 <span onClick={() => navigate(`/linkedin/${user?.username}`)}>
+                 <div onClick={() => navigate(`/linkedin/${user?.username}`)} className={` ${switchTheme ? "active:bg-gray-700" : "active:bg-gray-100"}  overflow-x-hidden `} >
                     {/* <LazyLoadImage
                   width={profileRef?.current.clientWidth}
                   height={profileRef?.current.clientHeight}
@@ -195,13 +195,14 @@ const NavBar = ({ messaging, displayNav, connections, searchActiveSmall, setSear
                   placeholderSrc={PLACEHOLDERIMAGE}
                 /> */}
                 <img src={user?.photo}  alt="" />
-                 </span>
+                 </div>
             
                 
                 }
             
             {user && searchActiveSmall && <FaArrowLeft className={`cursor-pointer ${switchTheme?"text-gray-300":""}`} onClick={() => setSearchActiveSmall(false)} />}
           </div>
+
           <span className={`flex-auto rounded-md flex items-center ${switchTheme ? 'bg-gray-700' : 'bg-gray-100'} px-1 justify-center  mx-2`} >
             <FaSearch className={` text-[#808080] top-[50%] mt-[.2rem]  `} />
             <input ref={searchRefSmall} onChange={
@@ -211,8 +212,9 @@ const NavBar = ({ messaging, displayNav, connections, searchActiveSmall, setSear
                 setSearchActiveSmall(true)
               }} placeholder='search' className={`w-full ${switchTheme ? 'bg-gray-700 text-gray-200' : 'bg-gray-100'} outline-none  p-2 h-full`} type="text " />
           </span>
-          <span className={`${searchActiveSmall ? 'hidden border border-gray-500' : 'block'}`}>
-            <Link to={`/messaging`}>
+
+          <span className={`${searchActiveSmall ? 'hidden border border-gray-500' : 'block'} ${switchTheme ? "active:bg-gray-700" : "active:bg-gray-100"}`}>
+            <Link to={`/messaging`} >
             <span className='relative'>
                 <BsFillChatDotsFill className={`text-[1.52rem] ${switchTheme ? "text-gray-300" : "text-gray-500"} `} />
                 {

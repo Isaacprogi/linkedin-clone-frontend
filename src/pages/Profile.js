@@ -701,7 +701,7 @@ const handleSwitch = () => {
             
         </div>
     ):<div className='w-full h-full flex items-center justify-center'>
-        <SyncLoader size={70} color={'gray'}/>
+        <SyncLoader size={20} color={'gray'}/>
     </div>
 }
 

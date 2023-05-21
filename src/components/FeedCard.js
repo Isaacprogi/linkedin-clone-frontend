@@ -407,21 +407,22 @@ const FeedCard = ({ feed, id: addID, feeds, feedInput,  setFeeds, setFeedToUpdat
         </div>
 
       <span className={`w-full grid grid-cols-2 ${switchTheme?'text-gray-300':'text-gray-600'} gap-3 px-2 py-2`}>
-        <button onClick={handleLike} className='rounded-md overflow-hidden'>
-          <div className={` ${switchTheme?'hover:bg-gray-700':'hover:bg-gray-100'} duration-200 text-[.8rem] md:text-[.9rem]  cursor-pointer w-full h-full py-2 flex flex-col md:flex-row  items-center justify-center `}>
+
+        <div onClick={handleLike} className={`rounded-md focus:bg-blue-100 overflow-hidden ${switchTheme?'active:bg-gray-700 md:active:none':'active:bg-gray-100 md:active:none'}`}>
+          <div className={` ${switchTheme?'md:hover:bg-gray-700':'md:hover:bg-gray-100'} duration-200 text-[.8rem] md:text-[.9rem]  cursor-pointer w-full h-full py-2 flex flex-col md:flex-row  items-center justify-center `}>
             <AiFillLike className={`${(feed?.likes?.filter(item=>item?._id === user?._id)?.length) > 0 ? 'text-blue-600 like' : '  like'}`} />
             <span disabled={likeLoading} className='font-[600]  '>
               Like
             </span>
           </div>
-        </button>
+        </div>
 
-        <button className='rounded-md overflow-hidden' onClick={() => setCommenting(!commenting)}>
-          <div className={`${switchTheme?'hover:bg-gray-700':'hover:bg-gray-100'}  w-full duration-200 text-[.8rem] md:text-[.9rem] cursor-pointer h-full py-2 flex flex-col md:flex-row items-center justify-center `}>
+        <div className={`rounded-md focus:bg-blue-100 overflow-hidden ${switchTheme?'active:bg-gray-700 md:active:none':'active:bg-gray-100 md:active:none'}`} onClick={() => setCommenting(!commenting)}>
+          <div className={`${switchTheme?'md:hover:bg-gray-700':'md:hover:bg-gray-100'}  w-full duration-200 text-[.8rem] md:text-[.9rem] cursor-pointer h-full py-2 flex flex-col md:flex-row items-center justify-center `}>
             <FaRegCommentDots />
             <span className='font-[600] '>Comment</span>
           </div>
-        </button>
+        </div>
       </span>
 
       <div className={`flex ${!commenting ? 'hidden' : ''}  items-start px-1 justify-between`}>

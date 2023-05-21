@@ -166,7 +166,7 @@ const Network = ({ setLinkType }) => {
 
           <div>
             <div className={`h-[3rem] mt-[.5rem]  md:rounded-lg ${switchTheme ? "bg-gray-800" : "bg-white md:border-gray-300 md:border"} overflow-hidden flex items-center justify-between md:px-2`}>
-              <p className={`text-gray-500 ${switchTheme ? "text-gray-300" : ""} font-[500] hidden md:block `}>{pendingConnections?.length < 1 ? 'No pending connections' : <div className='flex items-center'><span className='w-[0.5rem] h-[0.5rem] mr-2 flex rounded-full overflow-hidden bg-red-600'></span> You have pending connections</div>}</p>
+              <p className={`text-gray-500 ${switchTheme ? "text-gray-300" : ""} font-[500] hidden md:block `}>{pendingConnections?.length < 1 ? 'No pending connections' : <span className='flex items-center'><span className='w-[0.5rem] h-[0.5rem] mr-2 flex rounded-full overflow-hidden bg-red-600'></span> You have pending connections</span>}</p>
               <p className='text-gray-400 font-[700] hidden md:block cursor-pointer' onClick={() => {
                 navigate('/my-network/invitation-manager/recieved')
                 setLinkType('recieved')

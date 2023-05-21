@@ -12,7 +12,11 @@ function SingleMessageByUser({lastListRef,message,photo}) {
   const profilePicRef = useRef('')
 
   useEffect(()=>{
-    setMessageTime(new Date(message?.updatedAt).toLocaleTimeString())
+    const currentDate =  new Date(message?.updatedAt)
+    const currentHour = currentDate.getHours();
+    const currentMinute = currentDate.getMinutes();
+
+    setMessageTime(`${currentHour}:${currentMinute}`)
   },[message])
 
   

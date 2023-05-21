@@ -19,8 +19,8 @@ const FootBar = () => {
 
 
 
-  return <div className={`w-full h-[3.3rem] ${postActiveSmall?'hidden':''} z-[900] md:hidden grid grid-cols-5 justify-between ${switchTheme?'bg-gray-800 text-gray-300':'bg-white text-[#808080]'} px-1 fixed bottom-0 left-0`}>
-    <div className=" overflow-x-hidden">
+  return <div className={`w-full h-[3.3rem] ${postActiveSmall?'hidden':''} z-[900] md:hidden grid grid-cols-5 justify-between ${switchTheme?'bg-gray-800 text-gray-300':'bg-white text-[#808080]'}  fixed bottom-0 left-0`}>
+    <div className={` ${switchTheme ? "active:bg-gray-700" : "active:bg-gray-100"}  overflow-x-hidden `}>
       <Link to='/'>
         <span className='relative cursor-pointer  w-full h-full flex flex-col items-center justify-center'><MdHome className='text-[1.52rem]' />
           <p className='text-[.6rem]'>Home</p>
@@ -28,8 +28,8 @@ const FootBar = () => {
       </Link>
     </div>
 
-    <div className=" overflow-x-hidden ">
-      <Link to='/my-network'>
+    <div className={` ${switchTheme ? "active:bg-gray-700" : "active:bg-gray-100"}  overflow-x-hidden `}>
+      <Link to='/my-network' className='bg-red-700 active:bg-gray-100'>
         <span className='relative w-full h-full   flex flex-col items-center justify-center'>
         <span className='relative'>
                   <BsFillPeopleFill className={`text-[1.52rem] ${switchTheme ? "text-gray-300" : ""} `} />
@@ -52,20 +52,24 @@ const FootBar = () => {
         </span>
       </Link>
     </div>
-    <div onClick={() => setPostActiveSmall(!postActiveSmall)} className=" overflow-x-hidden cursor-pointer ">
+
+    <div onClick={() => setPostActiveSmall(!postActiveSmall)} className={` ${switchTheme ? "active:bg-gray-700" : "active:bg-gray-100"}  overflow-x-hidden `}>
 
       <span className='relative w-full h-full    flex flex-col items-center justify-center'><MdAddBox className='text-[1.52rem]' />
         <p className='text-[.6rem]'>Post</p>
       </span>
 
     </div>
-    <div className="overflow-x-hidden">
+    
+    <div className={` ${switchTheme ? "active:bg-gray-700" : "active:bg-gray-100"}  overflow-x-hidden `}>
       <Link to='/notifications'>
         <span className='relative w-full h-full   flex flex-col items-center justify-center'><IoMdNotifications className='text-[1.52rem]' />
           <p className='text-[.6rem]'>Notifications</p>
         </span>
-      </Link></div>
-    <div className=" overflow-x-hidden ">
+      </Link>
+      </div>
+
+      <div className={` ${switchTheme ? "active:bg-gray-700" : "active:bg-gray-100"}  overflow-x-hidden `}>
       <Link to='/jobs'>
         <span className='relative w-full h-full   flex flex-col items-center justify-center'><BsFillBagFill className='text-[1.52rem]' />
           <p className='text-[.6rem]'>Jobs</p>

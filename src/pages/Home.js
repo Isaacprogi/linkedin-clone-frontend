@@ -315,14 +315,14 @@ const Home = ({ feeds, setFeeds }) => {
 
 
   const [pageNumber, setPageNumber] = useState(1)
-  const url = 'https://linkedin-clone-api.onrender.com/api/post'
+  const url = 'http://localhost:4000/api/post'
   const [hasMore, setHasMore] = useState(true)
   const [scrolling, setScrolling] = useState(false)
   const [postFetchLoading, setPostFetchLoading] = useState(false)
 
 
   const FEED = useCallback(() => {
-    return <Feed postFetchLoading={postFetchLoading} feeds={feeds} hasMore={hasMore} feedInput={feedInput} setFeedToUpdateId={setFeedToUpdateId} setButtonActive={setButtonActive} setComponent={setComponent} setPostEditing={setPostEditing} setPostActive={setPostActive} postActive={postActive} setFeeds={setFeeds} />
+    return <Feed postFetchLoading={postFetchLoading}  feeds={feeds} hasMore={hasMore} feedInput={feedInput} setFeedToUpdateId={setFeedToUpdateId} setButtonActive={setButtonActive} setComponent={setComponent} setPostEditing={setPostEditing} setPostActive={setPostActive} postActive={postActive} setFeeds={setFeeds} />
   }, [feeds, postFetchLoading,postActive,setFeeds,hasMore])
 
 
@@ -351,14 +351,14 @@ const Home = ({ feeds, setFeeds }) => {
           return setHasMore(res?.data.length > 0)
         }
         setFeeds([...res?.data])
-        setPostFetchLoading(false)
         setHasMore(res?.data?.length > 0)
         return;
         
       }).catch(e => {
         if (axios.isCancel(e)) return
-        setPostFetchLoading(false)
         setHasMore(false)
+      }).finally(()=>{
+        setPostFetchLoading(false)
       })
     }
     return () => cancel()
@@ -370,15 +370,13 @@ const Home = ({ feeds, setFeeds }) => {
 
   const scrollToEnd = (e) => {
     setScrolling(true)
-    if ((e.target.scrollHeight - e.target.scrollTop) === e.target.clientHeight && hasMore) {
+    if ((e.target.scrollHeight - e.target.scrollTop) === (e.target.clientHeight) && hasMore) {
       setPageNumber(pageNumber + 1)
     }
-
+   
   }
-
-
-
-
+ 
+  
 
 
 

@@ -55,7 +55,7 @@ const Messaging = ({socket}) => {
           <div className={` md:h-[calc(100vh-5.4rem)] md:min-h-[25rem]   flex flex-col ${switchTheme?'bg-gray-800':'bg-white border-gray-300 md:border  '}  md:rounded-tl-lg `}>
             <div className=" h-[4.2rem] md:h-[3rem] flex-none text-gray-500 flex items-center justify-between px-3 md:px-2">
               <span className='flex  items-center justify-between'>
-                <FaArrowLeft onClick={() => navigate(-1)} className={`${switchTheme?"text-gray-300":""} mr-3 cursor-pointer md:hidden` }/> 
+                <FaArrowLeft onClick={() => navigate(-1)} className={`${switchTheme?"text-gray-300 active:bg-gray-700":"bg-gray-100"} mr-3 cursor-pointer md:hidden` }/> 
               <p className={`${switchTheme?"text-gray-300 font-[600]":""}`}>
                 Messages</p>
                 </span>

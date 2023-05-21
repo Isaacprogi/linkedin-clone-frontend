@@ -6,7 +6,11 @@ function SingleMessageByOther({lastListRef,message}) {
   const {switchTheme} = useThemeContext()
   
   useEffect(()=>{
-    setMessageTime(new Date(message?.updatedAt).toLocaleTimeString())
+    const currentDate =  new Date(message?.updatedAt)
+    const currentHour = currentDate.getHours();
+    const currentMinute = currentDate.getMinutes();
+
+    setMessageTime(`${currentHour}:${currentMinute}`)
   },[message])
   
   return (
