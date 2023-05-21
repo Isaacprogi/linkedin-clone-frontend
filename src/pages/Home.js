@@ -315,7 +315,7 @@ const Home = ({ feeds, setFeeds }) => {
 
 
   const [pageNumber, setPageNumber] = useState(1)
-  const url = 'http://localhost:4000/api/post'
+  const url = 'https://linkedin-clone-api.onrender.com/api/post'
   const [hasMore, setHasMore] = useState(true)
   const [scrolling, setScrolling] = useState(false)
   const [postFetchLoading, setPostFetchLoading] = useState(false)
