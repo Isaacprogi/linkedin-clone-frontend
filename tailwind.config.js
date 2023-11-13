@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'nunito':['Press Start 2P','cursive']
+        // 'nunito':['Press Start 2P','cursive']
       },
       gridTemplateColumns:{
         'large':'15rem auto 30%',
